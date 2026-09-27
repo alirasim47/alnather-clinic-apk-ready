@@ -78,8 +78,8 @@ export default function Users() {
           </div>
           <button onClick={openAdd} className="btn-accent"><i className="fa-solid fa-plus" /> إضافة مستخدم</button>
         </div>
-        <div className="overflow-x-auto">
-          <table className="w-full">
+        <div className="mobile-table-wrap">
+          <table className="mobile-table w-full">
             <thead className="bg-gray-50">
               <tr><th className="th">الاسم الكامل</th><th className="th">اسم المستخدم</th><th className="th">الصلاحية</th><th className="th">الحالة</th><th className="th">إجراءات</th></tr>
             </thead>

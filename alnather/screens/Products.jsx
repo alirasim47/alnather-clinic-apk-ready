@@ -98,8 +98,8 @@ export default function Products() {
       </div>
 
       <Card>
-        <div className="overflow-x-auto">
-          <table className="w-full">
+        <div className="mobile-table-wrap">
+          <table className="mobile-table w-full">
             <thead className="bg-gray-50">
               <tr><th className="th">اسم المنتج</th><th className="th">التصنيف</th><th className="th">سعر الشراء</th>
                 <th className="th">سعر البيع</th><th className="th">الكمية</th><th className="th">حد التنبيه</th><th className="th">إجراءات</th></tr>

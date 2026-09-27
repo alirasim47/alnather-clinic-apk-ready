@@ -65,8 +65,8 @@ export default function Examiners() {
           </div>
           <button onClick={openAdd} className="btn-accent"><i className="fa-solid fa-plus" /> إضافة فاحص</button>
         </div>
-        <div className="overflow-x-auto">
-          <table className="w-full">
+        <div className="mobile-table-wrap">
+          <table className="mobile-table w-full">
             <thead className="bg-gray-50">
               <tr><th className="th">اسم الفاحص</th><th className="th">الجوال</th><th className="th">المسمى الوظيفي</th><th className="th">الحالة</th><th className="th">إجراءات</th></tr>
             </thead>

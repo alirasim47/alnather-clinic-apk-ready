@@ -115,8 +115,8 @@ export default function Dashboard({ go }) {
               </button>
             }
           />
-          <div className="overflow-x-auto">
-            <table className="w-full">
+          <div className="mobile-table-wrap">
+            <table className="mobile-table w-full">
               <thead className="bg-gray-50">
                 <tr>
                   <th className="th">اسم المريض</th>
@@ -174,8 +174,8 @@ export default function Dashboard({ go }) {
               </button>
             }
           />
-          <div className="overflow-x-auto">
-            <table className="w-full">
+          <div className="mobile-table-wrap">
+            <table className="mobile-table w-full">
               <thead className="bg-gray-50">
                 <tr>
                   <th className="th">اسم المريض</th>

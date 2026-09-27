@@ -34,6 +34,23 @@ export default function Shell({ onLogout }) {
     if (TITLES[saved]) setPage(saved);
   }, []);
 
+  useEffect(() => {
+    const syncTableLabels = () => {
+      document.querySelectorAll(".mobile-table").forEach((table) => {
+        const labels = Array.from(table.querySelectorAll("thead th")).map((th) => th.textContent.trim());
+        table.querySelectorAll("tbody tr").forEach((row) => {
+          row.querySelectorAll("td").forEach((cell, index) => {
+            if (!cell.dataset.label) cell.dataset.label = labels[index] || "";
+          });
+        });
+      });
+    };
+    syncTableLabels();
+    const observer = new MutationObserver(syncTableLabels);
+    observer.observe(document.body, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, [page]);
+
   const go = (next) => {
     setPage(next);
     setSidebarOpen(false);

@@ -77,8 +77,8 @@ export default function Followups() {
       </div>
 
       <Card>
-        <div className="overflow-x-auto">
-          <table className="w-full">
+        <div className="mobile-table-wrap">
+          <table className="mobile-table w-full">
             <thead className="bg-gray-50">
               <tr><th className="th">التاريخ</th><th className="th">الوقت</th><th className="th">اسم المريض</th>
                 <th className="th">الجوال</th><th className="th">الحالة</th><th className="th">ملاحظات</th><th className="th">إجراءات</th></tr>

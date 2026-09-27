@@ -94,8 +94,8 @@ export default function Reports() {
             <i className="fa-solid fa-table ml-2 text-accent" />تفاصيل الفترة ({fmtDate(from)} — {fmtDate(to)})
           </h3>
         </div>
-        <div className="overflow-x-auto">
-          <table className="w-full">
+        <div className="mobile-table-wrap">
+          <table className="mobile-table w-full">
             <thead className="bg-gray-50">
               <tr>
                 <th className="th">رقم الفاتورة</th><th className="th">التاريخ</th><th className="th">المريض</th>

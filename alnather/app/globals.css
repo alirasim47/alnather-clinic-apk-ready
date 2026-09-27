@@ -59,6 +59,37 @@ body {
     -webkit-overflow-scrolling: touch;
     touch-action: pan-y;
   }
+
+  .mobile-table-wrap { min-width: 0; }
+}
+
+@media (max-width: 639px) {
+  .mobile-table-wrap { overflow: visible; }
+  .mobile-table { display: block; width: 100%; }
+  .mobile-table thead { display: none; }
+  .mobile-table tbody { display: grid; gap: 0.75rem; }
+  .mobile-table tbody tr {
+    display: block; overflow: hidden; border: 1px solid rgb(229 231 235);
+    border-radius: 0.875rem; background: white; padding: 0.55rem 0.8rem;
+    box-shadow: 0 2px 8px rgb(44 27 61 / 0.05);
+  }
+  .mobile-table tbody tr:hover { background: white; }
+  .mobile-table td {
+    display: flex; min-width: 0; align-items: flex-start; justify-content: space-between;
+    gap: 1rem; border: 0; padding: 0.45rem 0; text-align: right; white-space: normal;
+  }
+  .mobile-table td::before {
+    flex: 0 0 auto; color: rgb(107 114 128); content: attr(data-label);
+    font-size: 0.7rem; font-weight: 800;
+  }
+  .mobile-table td[colspan] { display: block; padding: 1.75rem 0.25rem; text-align: center; }
+  .mobile-table td[colspan]::before { display: none; }
+  .mobile-table td[data-label="إجراءات"] {
+    justify-content: flex-start; border-top: 1px solid rgb(243 244 246);
+    margin-top: 0.2rem; padding-top: 0.65rem;
+  }
+  .mobile-table td[data-label="إجراءات"]::before { display: none; }
+  .mobile-table td > * { max-width: 100%; }
 }
 
 ::-webkit-scrollbar { width: 6px; height: 6px; }

@@ -121,8 +121,8 @@ export default function Patients() {
         <div className="border-b border-gray-100 px-5 py-4">
           <h3 className="font-extrabold text-primary"><i className="fa-solid fa-clock-rotate-left ml-2 text-accent" />سجل الفحوصات السابقة</h3>
         </div>
-        <div className="overflow-x-auto">
-          <table className="w-full">
+        <div className="mobile-table-wrap">
+          <table className="mobile-table w-full">
             <thead className="bg-gray-50">
               <tr>
                 <th className="th">التاريخ</th><th className="th">نوع العدسة</th><th className="th">الفاحص</th>
@@ -358,8 +358,8 @@ export default function Patients() {
           </div>
 
           <Card>
-            <div className="overflow-x-auto">
-              <table className="w-full">
+            <div className="mobile-table-wrap">
+              <table className="mobile-table w-full">
                 <thead className="bg-gray-50">
                   <tr>
                     <th className="th">الاسم</th><th className="th">الجوال</th><th className="th">رقم الملف</th>

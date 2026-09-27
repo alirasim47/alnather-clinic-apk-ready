@@ -109,8 +109,8 @@ export default function Invoices() {
       </Card>
 
       <Card>
-        <div className="overflow-x-auto">
-          <table className="w-full">
+        <div className="mobile-table-wrap">
+          <table className="mobile-table w-full">
             <thead className="bg-gray-50">
               <tr><th className="th">رقم الفاتورة</th><th className="th">التاريخ</th><th className="th">المريض</th>
                 <th className="th">الإجمالي</th><th className="th">المدفوع</th><th className="th">المتبقي</th>
@@ -162,8 +162,8 @@ export default function Invoices() {
               <div className="rounded-lg bg-gray-50 p-3"><b>طريقة الدفع:</b> {payAr[viewing.method] || viewing.method}</div>
               <div className="rounded-lg bg-gray-50 p-3">{stBadge(viewing.status)}</div>
             </div>
-            <div className="overflow-x-auto">
-              <table className="w-full">
+            <div className="mobile-table-wrap">
+              <table className="mobile-table w-full">
                 <thead className="bg-gray-50">
                   <tr><th className="th">الصنف</th><th className="th">الكمية</th><th className="th">السعر</th><th className="th">الإجمالي</th></tr>
                 </thead>
@@ -349,7 +349,7 @@ function PosModal({ onClose, onSave }) {
           </button>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="mobile-table-wrap">
           <table className="w-full overflow-hidden rounded-xl2 border border-gray-100">
             <thead className="bg-gray-50"><tr><th className="th">الصنف</th><th className="th">السعر</th><th className="th">الكمية</th><th className="th">الإجمالي</th><th className="th"></th></tr></thead>
             <tbody className="divide-y divide-gray-50">
