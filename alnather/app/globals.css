@@ -4,7 +4,7 @@
 
 :root { color-scheme: light; }
 
-html, body { height: 100%; }
+html, body, #__next { height: 100%; min-height: 100%; }
 
 html {
   -webkit-text-size-adjust: 100%;
@@ -16,6 +16,7 @@ body {
   direction: rtl;
   overscroll-behavior-y: none;
   overflow: hidden;
+  overscroll-behavior: none;
 }
 
 * { -webkit-tap-highlight-color: transparent; }
@@ -51,6 +52,13 @@ body {
 
   .chip        { @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold; }
   .field-label { @apply mb-1.5 block text-sm font-bold text-gray-700; }
+
+  .scroll-y-touch {
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+  }
 }
 
 ::-webkit-scrollbar { width: 6px; height: 6px; }

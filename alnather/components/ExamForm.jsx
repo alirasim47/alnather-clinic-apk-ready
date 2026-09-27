@@ -67,7 +67,7 @@ const RxCell = ({ value, onChange, placeholder }) => (
     value={value}
     onChange={(e) => onChange(e.target.value)}
     placeholder={placeholder}
-    className="input h-10 px-2 text-center font-mono text-sm"
+    className="input min-w-0 h-11 px-1 text-center font-mono text-sm"
   />
 );
 
@@ -75,11 +75,11 @@ function EyeRow({ section, eye, state, dispatch }) {
   const set = (field) => (value) => dispatch({ type: "rx", section, eye, field, value });
   const ar = eye === "OD" ? "اليمنى" : "اليسرى";
   return (
-    <div className="grid grid-cols-[90px_1fr_1fr_1fr] items-center gap-3">
-      <div className="flex items-center gap-2">
+    <div className="grid grid-cols-[58px_repeat(3,minmax(0,1fr))] items-center gap-2 sm:grid-cols-[90px_1fr_1fr_1fr] sm:gap-3">
+      <div className="flex min-w-0 flex-col items-center gap-1 sm:flex-row sm:gap-2">
         <span className={`flex h-8 w-11 items-center justify-center rounded-lg text-xs font-black
           ${eye === "OD" ? "bg-purple-100 text-purple-700" : "bg-teal-100 text-teal-700"}`}>{eye}</span>
-        <span className="text-xs font-bold text-gray-500">{ar}</span>
+        <span className="truncate text-[10px] font-bold text-gray-500 sm:text-xs">{ar}</span>
       </div>
       <RxCell value={state[section][eye].SPH} onChange={set("SPH")} placeholder="SPH" />
       <RxCell value={state[section][eye].CYL} onChange={set("CYL")} placeholder="CYL" />
@@ -91,11 +91,12 @@ function EyeRow({ section, eye, state, dispatch }) {
 function RxSection({ title, icon, section, state, dispatch, tone }) {
   return (
     <div className={`rounded-xl2 border-2 p-4 ${tone}`}>
-      <div className="mb-3 flex items-center justify-between">
+      <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <h4 className="flex items-center gap-2 font-extrabold text-primary">
           <i className={`fa-solid ${icon}`} /> {title}
         </h4>
-        <div className="grid w-full max-w-[260px] grid-cols-3 gap-3 text-center text-[10px] font-black text-gray-400">
+        <div className="grid w-full grid-cols-[58px_repeat(3,minmax(0,1fr))] gap-2 text-center text-[10px] font-black text-gray-400 sm:max-w-[260px] sm:grid-cols-3 sm:gap-3">
+          <span className="sm:hidden" />
           <span>SPH</span><span>CYL</span><span>AXIS</span>
         </div>
       </div>
@@ -149,7 +150,7 @@ export default function ExamForm({ patient, exam = null, onClose, onSave }) {
 
   return (
     <Modal open onClose={onClose} wide title={`نموذج فحص النظر — ${patient.name}`}>
-      <div className="space-y-5">
+      <div className="space-y-5 pb-2">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           <RxSection title="الرؤية البعيدة (DISTANCE)" icon="fa-mountain-sun" section="distance"
             state={state} dispatch={dispatch} tone="border-purple-200 bg-purple-50/50" />
@@ -198,11 +199,11 @@ export default function ExamForm({ patient, exam = null, onClose, onSave }) {
 
         <Field label="ملاحظات"><textarea className="input min-h-16" placeholder="ملاحظات إضافية..." value={state.notes} onChange={set("notes")} /></Field>
 
-        <div className="flex items-center justify-between border-t border-gray-100 pt-4">
+        <div className="sticky bottom-0 z-10 -mx-4 mt-2 flex flex-col gap-3 border-t border-gray-100 bg-white/95 px-4 pb-1 pt-4 backdrop-blur sm:static sm:mx-0 sm:flex-row sm:items-center sm:justify-between sm:bg-transparent sm:px-0 sm:backdrop-blur-none">
           <button onClick={() => dispatch({ type: "reset" })} className="btn-ghost">
             <i className="fa-solid fa-rotate-right" /> تفريغ الحقول
           </button>
-          <div className="flex gap-3">
+          <div className="flex w-full gap-2 sm:w-auto sm:gap-3">
             <button onClick={onClose} className="btn-outline-danger">إلغاء</button>
             <button onClick={submit} className="btn-accent"><i className="fa-solid fa-floppy-disk" /> حفظ الفحص</button>
           </div>

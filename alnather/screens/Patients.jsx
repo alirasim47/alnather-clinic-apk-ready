@@ -447,9 +447,9 @@ function PatientFormModal({ patient = null, onClose, onSave, title }) {
         </div>
         <Field label="العنوان"><Input placeholder="المدينة — الحي" value={f.address} onChange={set("address")} /></Field>
         <Field label="ملاحظات"><textarea className="input min-h-20" placeholder="أي ملاحظات طبية مهمة..." value={f.notes} onChange={set("notes")} /></Field>
-        <div className="flex justify-end gap-3 border-t border-gray-100 pt-4">
-          <button type="button" onClick={onClose} className="btn-outline-danger">إلغاء</button>
-          <button type="submit" className="btn-accent"><i className="fa-solid fa-floppy-disk" /> {patient ? "حفظ التعديلات" : "حفظ"}</button>
+        <div className="sticky bottom-0 z-10 -mx-4 flex gap-2 border-t border-gray-100 bg-white/95 px-4 pb-1 pt-4 backdrop-blur sm:static sm:mx-0 sm:justify-end sm:bg-transparent sm:px-0 sm:backdrop-blur-none">
+          <button type="button" onClick={onClose} className="btn-outline-danger flex-1 sm:flex-none">إلغاء</button>
+          <button type="submit" className="btn-accent flex-1 sm:flex-none"><i className="fa-solid fa-floppy-disk" /> {patient ? "حفظ التعديلات" : "حفظ"}</button>
         </div>
       </form>
     </Modal>

@@ -45,7 +45,7 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-[#2c1b3d] via-[#341f48] to-[#1d1732] p-4">
+    <div className="relative flex min-h-[100dvh] items-center justify-center overflow-y-auto bg-gradient-to-br from-[#2c1b3d] via-[#341f48] to-[#1d1732] p-4">
       <div className="absolute left-[-80px] top-[-80px] h-60 w-60 rounded-full bg-accent/20 blur-3xl" />
       <div className="absolute bottom-[-100px] right-[-60px] h-72 w-72 rounded-full bg-white/10 blur-3xl" />
 

@@ -52,7 +52,7 @@ export default function Shell({ onLogout }) {
 
       <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
         <Topbar title={TITLES[page]} onMenu={() => setSidebarOpen(true)} />
-        <main className="flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6 pb-4">
+        <main className="min-h-0 flex-1 scroll-y-touch p-3 pb-[calc(1rem+env(safe-area-inset-bottom))] sm:p-6">
           {page === "dashboard" && <Dashboard go={go} />}
           {page === "patients" && <Patients />}
           {page === "followups" && <Followups />}

@@ -43,7 +43,7 @@ export function Modal({ open, onClose, title, children, wide = false }) {
         className={`
           relative z-10 flex w-full flex-col overflow-hidden bg-white shadow-2xl
           rounded-t-2xl sm:rounded-2xl
-          max-h-[92dvh] sm:max-h-[90dvh]
+          h-[min(94dvh,52rem)] max-h-[94dvh] sm:h-auto sm:max-h-[90dvh]
           ${wide ? "sm:max-w-4xl" : "sm:max-w-lg"}
           sm:mx-4
         `}
@@ -63,7 +63,7 @@ export function Modal({ open, onClose, title, children, wide = false }) {
           </button>
         </div>
 
-        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6">
+        <div className="min-h-0 flex-1 scroll-y-touch px-4 pb-[calc(1.25rem+env(safe-area-inset-bottom))] pt-4 sm:p-6">
           {children}
         </div>
       </div>
