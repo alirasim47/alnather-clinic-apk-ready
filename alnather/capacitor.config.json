@@ -1,0 +1,8 @@
+﻿{
+  "appId": "com.alnather.clinic",
+  "appName": "عيادة العلي",
+  "webDir": "out",
+  "server": {
+    "androidScheme": "https"
+  }
+}
