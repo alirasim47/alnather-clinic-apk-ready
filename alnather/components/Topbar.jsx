@@ -54,7 +54,7 @@ export default function Topbar({ title, onMenu }) {
         </span>
 
         <div className="flex items-center gap-3">
-          <div className="hidden text-right sm:block">
+          <div className="hidden text-right landscape:block">
             <div className="text-sm font-extrabold leading-none text-gray-800">{user.name}</div>
             <div className="mt-1 text-[11px] font-bold text-[#eab308]">{roleAr[user.role] || user.role || "مدير العيادة"}</div>
           </div>
