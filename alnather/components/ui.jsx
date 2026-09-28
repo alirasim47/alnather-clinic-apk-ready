@@ -141,7 +141,8 @@ export const Toggle = ({ on = false, onChange }) => (
     role="switch"
     aria-checked={Boolean(on)}
     onClick={() => onChange?.(!on)}
-    className={`relative inline-flex h-6 w-11 shrink-0 items-center rounded-full transition
+    dir="ltr"
+    className={`relative inline-flex h-6 w-11 shrink-0 items-center overflow-hidden rounded-full transition
       ${on ? "bg-emerald-500" : "bg-gray-300"}`}
   >
     <span

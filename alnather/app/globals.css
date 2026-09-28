@@ -63,7 +63,7 @@ body {
   .mobile-table-wrap { min-width: 0; }
 }
 
-@media (max-width: 639px) {
+@media (max-width: 1023px) {
   .mobile-table-wrap { overflow: visible; }
   .mobile-table { display: block; width: 100%; }
   .mobile-table thead { display: none; }
