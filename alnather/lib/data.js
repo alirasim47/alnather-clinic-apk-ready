@@ -11,7 +11,7 @@ export const seedProducts = [];
 export const seedFollowups = [];
 
 export const seedUsers = [
-  { id: 1, name: "أبو حسين", username: "admin", role: "admin", active: true }
+  { id: 1, name: "علي حسن", username: "admin", role: "admin", active: true }
 ];
 
 export const roleAr = { admin: "مدير النظام", accountant: "محاسب", receptionist: "موظف استقبال", examiner: "فاحص" };

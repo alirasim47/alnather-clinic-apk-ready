@@ -1,6 +1,6 @@
 export const DEFAULT_ADMIN_USER = {
   id: 1,
-  name: "أبو حسين",
+  name: "علي حسن",
   username: "admin",
   role: "admin",
   active: true,
@@ -85,7 +85,8 @@ export function ensureClinicBaseline() {
 
   const rawUsers = readStorage(STORAGE_KEYS.users, DEFAULT_BASELINE.users);
   const users = Array.isArray(rawUsers) ? rawUsers.filter(Boolean) : [];
-  const adminUser = users.find((user) => String(user?.username || "").toLowerCase() === "admin") || DEFAULT_ADMIN_USER;
+  const storedAdmin = users.find((user) => String(user?.username || "").toLowerCase() === "admin");
+  const adminUser = { ...(storedAdmin || DEFAULT_ADMIN_USER), name: "علي حسن" };
   const sanitizedUsers = [
     adminUser,
     ...users.filter((user) => String(user?.username || "").toLowerCase() !== "admin"),
