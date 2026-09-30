@@ -50,6 +50,22 @@ npx cap open android
   `android/app/build/outputs/apk/debug/app-debug.apk`
 - انسخه لموبايلك وثبّته (فعّل "تثبيت من مصادر غير معروفة" إذا طلب منك).
 
+### إذا ظهر خطأ `JAVA_HOME` أو `AAPT2` على Windows
+
+المشروع يستخدم Android Gradle Plugin 8.2.1؛ استخدم **JDK 17 كاملًا**، وتأكد أن `JAVA_HOME` يشير إلى مجلد الـ JDK نفسه (وليس مجلد `bin`). بدّل المسار أدناه بمسار JDK 17 الموجود عندك:
+
+```powershell
+$env:JAVA_HOME = "C:\Program Files\Java\jdk-17"
+$env:Path = "$env:JAVA_HOME\bin;$env:Path"
+java -version
+Test-Path "$env:JAVA_HOME\bin\jlink.exe" # لازم ترجع True
+cd .\android
+.\gradlew.bat --stop
+.\gradlew.bat assembleDebug
+```
+
+من Android Studio ← **SDK Manager** تأكد من تثبيت Android SDK Platform 34 و Android SDK Build-Tools 34.0.0. لا تشغّل `aapt2.exe` يدويًا؛ Gradle يستدعيه أثناء البناء. إذا منعه Windows Defender أو Device Guard، لا تعطّل حماية الجهاز؛ أصلح/حدّث Build-Tools من SDK Manager أو اطلب من مسؤول الجهاز معالجة سياسة الحظر.
+
 ### لو تريد بناءه من التيرمينال مباشرة (بدون فتح الواجهة)
 ```bash
 cd android
