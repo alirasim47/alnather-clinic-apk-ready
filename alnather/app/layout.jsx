@@ -7,8 +7,8 @@ import "@fontsource/tajawal/900.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export const metadata = {
-  title: "عيادة العلي — نظام إدارة فحص النظر والبصريات",
-  description: "نظام متكامل لإدارة عيادة العلي وفحص النظر",
+  title: "عيادتي — نظام إدارة العيادات",
+  description: "نظام متكامل لإدارة العيادات والمرضى والفحوصات",
   appleWebApp: { capable: true, statusBarStyle: "default" },
 };
 

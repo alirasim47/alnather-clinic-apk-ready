@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">عيادة العلي</string>
-    <string name="title_activity_main">عيادة العلي</string>
+    <string name="app_name">عيادتي</string>
+    <string name="title_activity_main">عيادتي</string>
     <string name="package_name">com.alnather.clinic</string>
     <string name="custom_url_scheme">com.alnather.clinic</string>
 </resources>

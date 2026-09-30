@@ -15,7 +15,7 @@ export const DEFAULT_EXAMINER = {
 };
 
 export const DEFAULT_CLINIC_SETTINGS = {
-  clinicName: "عيادة العلي",
+  clinicName: "عيادتي",
   phone1: "",
   phone2: "",
   footerText: "",

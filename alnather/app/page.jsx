@@ -69,7 +69,7 @@ function Login({ onLogin }) {
         <button type="button" onClick={() => setIntro(false)} className="btn-accent mt-8 w-full py-3 text-base sm:w-auto sm:min-w-48">
           التالي <i className="fa-solid fa-arrow-left" />
         </button>
-        <p className="mt-6 text-xs font-bold text-gray-400">عيادة العلي — نظام إدارة فحص النظر والبصريات</p>
+        <p className="mt-6 text-xs font-bold text-gray-400">عيادتي — نظام إدارة العيادات</p>
       </div>
     </div>
   );

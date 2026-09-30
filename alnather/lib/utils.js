@@ -45,7 +45,7 @@ export function buildWhatsApp({
   name,
   date,
   time,
-  clinic = "عيادة العلي",
+  clinic = "عيادتي",
   countryCode = "964",
   customTemplate = "",
 }) {
@@ -126,7 +126,7 @@ export function printPrescription({ patient, exam, rx, clinic }) {
     </table>
     ${exam.refraction ? `<h2>نتيجة الانكسار</h2><p style="font-size:13px">${exam.refraction}</p>` : ""}
     ${exam.notes ? `<h2>ملاحظات</h2><p style="font-size:13px">${exam.notes}</p>` : ""}
-   <div class="foot">تم إصدار هذه الوصفة إلكترونياً بواسطة نظام عيادة العلي لإدارة فحص النظر والبصريات</div>
+   <div class="foot">تم إصدار هذه الوصفة إلكترونياً بواسطة نظام عيادتي لإدارة العيادات</div>
     <script>window.onload=()=>setTimeout(()=>window.print(),300)</script>
   </body></html>`;
 
